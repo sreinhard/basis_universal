@@ -50,6 +50,6 @@ if (EMSCRIPTEN)
       SUFFIX ".js"
       LINK_FLAGS "--bind -s ALLOW_MEMORY_GROWTH=1 -O3 -s ASSERTIONS=0 -s MALLOC=emmalloc -s MODULARIZE=1 -s EXPORT_NAME=BASIS ")
 
-  install(TARGETS basis_transcoder.js DESTINATION .)
-  install(FILES ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/basis_transcoder.wasm DESTINATION .)
+  install(TARGETS basis_transcoder.js DESTINATION esri/libs/basisu)
+  install(FILES ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/basis_transcoder.wasm DESTINATION esri/libs/basisu)
 endif()
